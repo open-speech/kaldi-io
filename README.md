@@ -28,11 +28,15 @@ Results:
 #### About
 - The math dependency is solve automatically from system path, by cmake `find_package`(cmake/Modules/FindBLAS.cmake)
     - MKL/ATLAS/Accelerate(osx) is prefered
-    - if you want set specific math lib:
+    - if you want to set specific math lib:
     ```bash
     # make sure build dir is clean
     cmake -DBLAS_VENDORS=[ATLAS|MKL|OPEN|..] ..
     # additioinally, custom math lib search path can be set, for example:
     cmake -DBLAS_VENDORS=ATLAS -DBLAS_ATLAS_LIB_DIRS=.../atlas/build/lib ..
     cmake -DBLAS_VENDORS=MKL -DBLAS_MKL_LIB_DIRS=/opt/intel/mkl/lib/intel64 ..
+    ```
+    - If in conda, to install mkl:
+    ```bash
+    conda insatll mkl
     ```
