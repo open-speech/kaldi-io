@@ -7,6 +7,16 @@
 
 
 #### Compile
+- requirements:
+    - cmake >= 3.0
+    - one of blas math lib:
+        - atlas
+            - ubuntu: `sudo apt-get install libatlas3-base`
+        - mkl
+            - If in conda, to install mkl: `conda install mkl`
+        - Accelerate framework(Darwin)
+        - ...
+
 ```bash
 cd kaldi-io
 mkdir build && cd build
@@ -14,7 +24,7 @@ cmake -DCMAKE_INSTALL_PREFIX=.. .. # set install prefix as kaldi-io
 make
 make install 
 ```
-Results:
+#### Results:
 - kaldi-io/lib:
     - libkaldi_io_static.a 
     - libkaldi_io_shared.so
@@ -35,8 +45,4 @@ Results:
     # additioinally, custom math lib search path can be set, for example:
     cmake -DBLAS_VENDORS=ATLAS -DBLAS_ATLAS_LIB_DIRS=.../atlas/build/lib ..
     cmake -DBLAS_VENDORS=MKL -DBLAS_MKL_LIB_DIRS=/opt/intel/mkl/lib/intel64 ..
-    ```
-    - If in conda, to install mkl:
-    ```bash
-    conda install mkl
     ```
