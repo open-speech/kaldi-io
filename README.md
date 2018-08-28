@@ -38,5 +38,5 @@ Results:
     ```
     - If in conda, to install mkl:
     ```bash
-    conda insatll mkl
+    conda install mkl
     ```
