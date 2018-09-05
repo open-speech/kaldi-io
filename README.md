@@ -36,7 +36,7 @@ make install
 - Include the header dir and link the lib
 
 #### About
-- The math dependency is solve automatically from system path, by cmake `find_package`(cmake/Modules/FindBLAS.cmake)
+- The BLAS math dependency is solved automatically from system path, by cmake `find_package`(cmake/Modules/FindBLAS.cmake)
     - MKL/ATLAS/Accelerate(osx) is prefered
     - if you want to set specific math lib:
     ```bash
