@@ -14,9 +14,9 @@
     - mkl (recommended)
       - install [conda](https://www.anaconda.com/download/), and use it to install mkl: `conda install mkl` (mkl is installed with conda by default)
       - when cmake, `conda` should be in your path
-    - ~~atlas~~
+    - atlas
       - ubuntu: `sudo apt-get install libatlas3-base`
-      - deprecated, until i figure out how cmake can find it across many linux distributions
+      - when cmake, it maynot find your atlas automatically, thus you need set the math lib path as in "#About" below.
     - Accelerate framework (need do nothing for "macOS/Darwin")
     - ...
 
@@ -43,7 +43,7 @@ make install
 
 #### About
 
-- The math dependency is solve automatically from system path, by cmake `find_package`(cmake/Modules/FindBLAS.cmake)
+- The math dependency is solved automatically from system path, by cmake `find_package`(cmake/Modules/FindBLAS.cmake)
 
   - MKL/ATLAS/Accelerate(osx) is prefered
   - if you want to set specific math lib:
