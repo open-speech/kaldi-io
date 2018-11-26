@@ -10,6 +10,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -I${CMAKE_CURRENT_LIST_DIR} \
     -Wno-uninitialized \
     -msse -msse2 -pthread \
     -DHAVE_EXECINFO_H=1 -DHAVE_CXXABI_H \
+    -D_GLIBCXX_USE_CXX11_ABI=0 \
     -O3")
 
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/Modules)
